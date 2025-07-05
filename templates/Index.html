@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcuGlow</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="calculator">
+        <form method="POST">
+            <input type="text" name="expression" placeholder="Enter equation..." required>
+        <div class="button_row">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <div class="result">{{ result }}</div>
+        </div>
+        </form>
+    </div>
+
+<script>
+  const resetBtn = document.querySelector('button[type="reset"]');
+  const resultBox = document.querySelector('.result');
+
+  resetBtn.addEventListener('click', () => {
+    resultBox.textContent = '';
+  });
+</script>
+</body>
+</html>

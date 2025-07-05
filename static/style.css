@@ -1,0 +1,138 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+            url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg') no-repeat center center fixed;background-size: cover;
+  overflow: hidden;
+
+}
+
+
+.calculator {
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0f0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+button_row {
+    display: flex;
+    gap: 30px;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="reset"]{
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 130px;
+}
+
+.result {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #0f0;
+}
+
+
+@media (min-width: 600px) {
+  .calculator {
+    max-width: 400px;
+    padding: 2rem;
+  }
+
+  input[type="text"] {
+    font-size: 1.2rem;
+  }
+
+  .result {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+
+  .calculator {
+    max-width: 500px;
+    box-shadow: 0 0 20px #0f0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .calculator {
+    max-width: 600px;
+  }
+
+  input[type="text"] {
+    font-size: 1.4rem;
+  }
+
+  .result {
+    font-size: 1.6rem;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 255, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input[type="text"],
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #00ff88;
+}
+
+.button_row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
